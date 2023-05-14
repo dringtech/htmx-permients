@@ -1,0 +1,11 @@
+<form id="thread" hx-get="error.html" hx-params="toot" hx-swap="outerHTML"
+  hx-on="htmx:load: prefillForm(event)
+         htmx:confirm: updateHistory(event)
+         htmx:configRequest: remapRequest(event)
+         htmx:beforeSwap: handleMastodonApiResponse(event)">
+  <div>
+    <label for="toot">Toot URL</label>
+    <input id="toot" name="toot" value="">
+  </div>
+  <input type="submit">
+</form>
