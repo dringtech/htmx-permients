@@ -5,7 +5,6 @@
   --foreground-dark: #111;
 }
 * { 
-  padding: 0;
   margin: 0;
 }
 body {
@@ -15,10 +14,10 @@ body {
   background: var(--page-background);
 }
 body > * {
-  max-width: 40rem;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 1em;
+  padding: 1rem;
 }
 main * + * {
   margin-top: 1.5em;
@@ -46,12 +45,12 @@ input {
   color: unset;
   background: unset;
 }
-input:focus-visible {
+*:focus-visible {
   outline-width: 3px;
   outline-offset: 2px;
   outline-style: solid;
 }
-input[type=submit] {
+input[type=submit], button {
   border: none;
   color: var(--foreground-light);
   background: var(--foreground-dark);
@@ -65,3 +64,10 @@ form, div.app, section {
   border-radius: 1em;
   padding: 1em;
 }
+nav {
+  display: flex;
+  gap: 1em;
+}
+/* nav * + * {
+  margin-top: 0;
+} */

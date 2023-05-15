@@ -1,0 +1,25 @@
+<section>
+  <p>
+    Enter the url of a toot and press Submit, and the app will progressively walk back through the thread to find the parent until there are no more.
+  </p>
+  <p>
+    You can append a toot parameter with a url encoding to pre-fill the form. This will look a bit like this:
+  </p>
+  <code>
+    <a href="?toot=https%3A%2F%2Fmastodon.me.uk%2F%40garius%2F110340128553620052">...?toot=https%3A%2F%2Fmastodon.me.uk%2F%40garius%2F110340128553620052</a>
+  </code>
+  <p>
+    Caveats:
+  </p>
+  <ul>
+    <li>
+      When you submit the form, the window is updated. You can then bookmark or share that link.
+    </li>
+    <li>
+      This only works on public toots.
+    </li>
+    <li>
+      There is a delay in fetching the parent toot.
+    </li>
+  </ul>
+</section>
