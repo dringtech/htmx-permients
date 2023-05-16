@@ -5,20 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toot Threader - HTMXamples</title>
+  <title>Toot Thread - htmxperiment</title>
   <link rel="stylesheet" href="/assets/style.css">
   <script src="https://unpkg.com/htmx.org@1.9.2"></script>
   <script src="handlers.js"></script>
 </head>
 
-<body hx-boost="true">
+<body>
   <header>
-    <h1>HTMX Toot Threader</h1>
+    <h1>Toot Thread</h1>
+    <p>Unroll a Mastodon thread with <a href="https://htmx.org/">htmx</a></p>
   </header>
   <nav>
     <button hx-get="form.html" hx-target="#app">Show app</button>
     <button hx-get="about.html" hx-target="#app">About</button>
   </nav>
+  <aside id="messages" hidden></aside>
   <main role="main">
     <div id="app">
       <div hx-get="form.html" hx-trigger="load" hx-target="#app">

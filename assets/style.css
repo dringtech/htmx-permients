@@ -68,6 +68,6 @@ nav {
   display: flex;
   gap: 1em;
 }
-/* nav * + * {
-  margin-top: 0;
-} */
+header a {
+  color: inherit;
+}
