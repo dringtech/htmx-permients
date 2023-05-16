@@ -1,6 +1,11 @@
 {
   "tasks": {
-    "dev": "deno run -A https://deno.land/std@0.171.0/http/file_server.ts",
-    "deploy": "deployctl deploy --include assets,toot-thread --project=$PROJECT_NAME https://deno.land/std@0.171.0/http/file_server.ts"
-  }
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s",
+    "deploy": "deployctl deploy --include _serve.ts,_site,import-map.json --project=$PROJECT_NAME --import-map=import-map.json _serve.ts",
+    "dev": "deno run -A _serve.ts"
+
+  },
+  "importMap": "./import-map.json"
 }
