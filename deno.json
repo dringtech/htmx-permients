@@ -3,10 +3,22 @@
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --allow-all -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "deploy": "deployctl deploy --include _serve.ts,_site,import-map.json --project=$PROJECT_NAME --import-map=import-map.json _serve.ts",
+    "deploy": "deno task build && deployctl deploy",
     "dev": "deno run -A _serve.ts"
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.2.2/"
+  },
+  "deploy": {
+    "project": "a154aae7-9d24-468e-bc4c-b5ff0a3eed7f",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [
+      "_site/",
+      "_serve.ts",
+      "deno.json"
+    ],
+    "entrypoint": "_serve.ts",
   }
 }
