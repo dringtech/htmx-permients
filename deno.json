@@ -1,11 +1,12 @@
 {
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --allow-all -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "deploy": "deployctl deploy --include _serve.ts,_site,import-map.json --project=$PROJECT_NAME --import-map=import-map.json _serve.ts",
     "dev": "deno run -A _serve.ts"
-
   },
-  "importMap": "./import-map.json"
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.2.2/"
+  }
 }
