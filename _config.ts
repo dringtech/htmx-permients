@@ -4,7 +4,9 @@ import metas from "lume/plugins/metas.ts";
 import minify_html from "lume/plugins/minify_html.ts";
 import postcss from "lume/plugins/postcss.ts";
 
-const site = lume();
+const site = lume({
+  src: "./src",
+});
 
 site.use(base_path());
 site.use(metas());
